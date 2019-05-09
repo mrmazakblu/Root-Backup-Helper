@@ -1,20 +1,21 @@
 #!/system/bin/sh
 
+
+
 ##
 # dd-backup helper script
 # by bigrammy @ xda-developers
 
-# Termux Needs "paste" WTF! for this to work it's included in "pkg install coreutils"
 # This Gem will find your by-name paths and add them 
-# to a text file in /sdcard/dd-backup But wait there's more
-# it also edits the text file with dd cmds automatically so 
-# you can copy 'n' paste them in your teminal
-# EG: /dd if=/dev/block/platform/mtk-msdc.0/11230000.MSDC0/by-name/boot of=/sdcard/dd-backup/boot.img 
+# to a sh file. But wait there's more
+# it also Runs the created shell to make the backup for you
 
-echo "making dd-backup folder"
+## Declairing the basic folders and File names to use ##
 folder="/sdcard/dd-backup"
 script="dd-backup.sh"
 script2="dd-backup-boot-recovery.sh"
+
+echo "making dd-backup folder"
 mkdir "$folder"
 ### Make Full Backup Script ###
 #echo "#!/data/data/com.termux/files/usr/bin/bash" > $script
