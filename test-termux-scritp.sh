@@ -7,7 +7,8 @@ set_var()
 	latest="$(curl $base/VERSION.md 2> /dev/null)"
 	current="$(cat mtk-su/VERSION.md 2> /dev/null)"
 	cdir="$PWD"
-	arch="$(uname -m)"
+#	arch="$(uname -m)"
+    arch=arm
     if [ "$arch" = "aarch64" ]; then 
 	    arch="arm64"
 	fi
@@ -42,4 +43,3 @@ else
    instal
    run
 fi
-done
