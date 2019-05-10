@@ -8,10 +8,10 @@ set_var()
 	current="$(cat mtk-su/VERSION.md 2> /dev/null)"
 	cdir="$PWD"
 	arch="$(uname -m)"
-    if test "$arch" = "aarch64"; then 
+    if test $arch = aarch64; then 
 	    arch="arm64"
 	fi
-    if test "$arch" = "armv71"; then 
+    if test $arch = armv71; then 
 	    arch="arm"
 	fi
 }
