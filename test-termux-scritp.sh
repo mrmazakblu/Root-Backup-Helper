@@ -8,13 +8,13 @@ set_var()
 	current="$(cat mtk-su/VERSION.md 2> /dev/null)"
 	cdir="$PWD"
 	arch="$(uname -m)"
-    if [ "$arch" = "aarch64" ]
+	if [ "$arch" = "aarch64" ]
 	then 
-	    arch="arm64"
+		arch="arm64"
 	fi
-    if [ "$arch" = "armv71" ]
+	if [ "$arch" = "armv71" ]
 	then 
-	    arch="arm"
+		arch="arm"
 	fi
 }
 
@@ -38,7 +38,7 @@ run()
 
 set_var
 # test override
-arch=arm
+#arch=arm
 if cmp -s "$latest" "$curent"
 then
    run
