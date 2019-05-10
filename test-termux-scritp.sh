@@ -35,15 +35,11 @@ run()
 }
 
 set_var
-#echo current version = $current
-#echo latest version = $latest
-#if cmp -s "$latest" "$curent"
-#then
-#    run
-#else
-#   install
-#  run
-#fi
-install
-run
+if cmp -s "$latest" "$curent"
+then
+   run
+else
+   instal
+   run
+fi
 done
