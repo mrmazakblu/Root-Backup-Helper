@@ -11,6 +11,9 @@ set_var()
     if [ "$arch" = "aarch64" ]; then 
 	    arch="arm64"
 	fi
+    if [ "$arch" = "armv71" ]; then 
+	    arch="arm"
+	fi
 }
 
 instal()
