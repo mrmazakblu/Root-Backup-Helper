@@ -13,7 +13,7 @@ set_var()
 	then 
 		arch="arm64"
 	fi
-	if [ "$arch" = "$unsupported" ]
+	if cmp "$arch" = "$unsupported"
 	then 
 		echo device not supported
 		exit
