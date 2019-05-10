@@ -35,8 +35,8 @@ run()
 }
 
 set_var
-echo current version = @current
-echo latest version = @latest
+echo current version = $current
+echo latest version = $latest
 if cmp -s "$latest" "$curent"
 then
     run
