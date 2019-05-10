@@ -4,7 +4,7 @@
 
 ##
 # dd-backup helper script
-# by bigrammy @ xda-developers
+# inspired by bigrammy @ xda-developers
 
 # This Gem will find your by-name paths and add them 
 # to a sh file. But wait there's more

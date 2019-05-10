@@ -11,7 +11,7 @@ Install termux and run these three commands
 
 Then curl this script to termux with the following commands
 
-	curl https://del.dog/bafepekecu > maker.sh
+	curl https://del.dog/raw/bafepekecu > maker.sh
 	chmod 755 maker.sh
 
 Next part will need root.
