@@ -7,12 +7,11 @@ set_var()
 	latest="$(curl $base/VERSION.md 2> /dev/null)"
 	current="$(cat mtk-su/VERSION.md 2> /dev/null)"
 	cdir="$PWD"
-#	arch="$(uname -m)"
-    arch=arm
-    if [ "$arch" = "aarch64" ]; then 
+	arch="$(uname -m)"
+    if [ "$arch" == "aarch64" ]; then 
 	    arch="arm64"
 	fi
-    if [ "$arch" = "armv71" ]; then 
+    if [ "$arch" == "armv71" ]; then 
 	    arch="arm"
 	fi
 }
