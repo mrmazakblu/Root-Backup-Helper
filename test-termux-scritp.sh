@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/data/data/com.termux/files/usr/bin/bash
 
 base="https://raw.githubusercontent.com/mrmazakblu/Root-Backup-Helper/master"
 clone="https://github.com/mrmazakblu/Root-Backup-Helper.git"
@@ -8,12 +8,11 @@ set_var()
 	current="$(cat mtk-su/VERSION.md 2> /dev/null)"
 	cdir="$PWD"
 	arch="$(uname -m)"
-	unsupported="armv71"
 	if [ "$arch" = "aarch64" ]
 	then 
 		arch="arm64"
 	fi
-	if cmp "$arch" "$unsupported"
+	if [ "$arch" = "armv71" ]
 	then 
 		echo device not supported
 		exit
