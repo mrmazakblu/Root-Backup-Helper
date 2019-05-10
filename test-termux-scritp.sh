@@ -14,6 +14,8 @@ set_var()
 	fi
 	if [ "$arch" = "armv71" ]
 	then 
+		echo device not supported
+		exit
 		arch="arm"
 	fi
 }
