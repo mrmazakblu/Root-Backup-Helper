@@ -8,11 +8,12 @@ set_var()
 	current="$(cat mtk-su/VERSION.md 2> /dev/null)"
 	cdir="$PWD"
 	arch="$(uname -m)"
+	unsupported="armv71"
 	if [ "$arch" = "aarch64" ]
 	then 
 		arch="arm64"
 	fi
-	if [ "$arch" = "armv71" ]
+	if [ "$arch" = "$unsupported" ]
 	then 
 		echo device not supported
 		exit
