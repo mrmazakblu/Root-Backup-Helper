@@ -7,6 +7,7 @@ Install termux and run these three commands
 	pkg update
 	pkg upgrade
 	pkg install curl
+	pkg install git
 
 Then curl this script to termux with the following commands
 
