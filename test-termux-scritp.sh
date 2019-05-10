@@ -17,6 +17,9 @@ set_var()
 		echo device not supported
 		exit
 		arch="arm"
+	else
+		echo device not supported
+		exit
 	fi
 }
 
