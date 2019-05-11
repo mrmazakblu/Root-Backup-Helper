@@ -1,8 +1,11 @@
 Work in progress.... Slooooowwly
 
+TO Run MTK-SU and then the backup helper
+
 Script to be used in android termux app
 
 Install termux and run these three commands
+to make sure you have needed termux resources
 
 	pkg update
 	pkg upgrade
@@ -11,15 +14,21 @@ Install termux and run these three commands
 
 Then curl this script to termux with the following commands
 
+	curl ttps://del.dog/raw/mtk-su.sh > mtk-sh.sh
+	chmod 755 mtk-su.sh
+	./mtk-su.sh
+	
+This will download V 12 of mtk-su, then check which version (32-bit or 64-bit)
+that is needed to run on your device.
+Then it will run the backup-maker script, and give the option to backup boot and recovery or all partitions.
+
+
+To run just the Backup-help curl from this address	
+	
 	curl https://del.dog/raw/bafepekecu > maker.sh
 	chmod 755 maker.sh
 
-Next part will need root.
-This project was a spinn off from XDA's  @diplomatics work with the temp root shell given by MTK-SU
-*working on a smooth method to joint these two steps together, for now you need to run MTK-SU , then from the root shell
-run this backup-Helper*
-
-Now from the root shell run the maker.sh to make your backup script, which will match your partition scheme, with the command
+Next part will need root to work. The method above includes a root step.
 
 	./maker.sh
 
