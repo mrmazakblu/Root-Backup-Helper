@@ -4,7 +4,7 @@ TO Run MTK-SU and then the backup helper
 
 Script to be used in android termux app
 
-Install termux and run these three commands
+Install termux and run these four commands
 to make sure you have needed termux resources
 
 	pkg update
