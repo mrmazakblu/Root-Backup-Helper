@@ -22,6 +22,7 @@ This will download V 12 of mtk-su, then check which version (32-bit or 64-bit)
 that is needed to run on your device.
 Then it will run the backup-maker script, and give the option to backup boot and recovery or all partitions.
 
+There is no gaurantee that this mtk-su will work on your particular device. If you fail to complete the first method , using mtk-su and backup-helper together then after getting root (some other way) you can still run back-up helper by itself
 
 To run just the Backup-help curl from this address	
 	
