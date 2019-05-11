@@ -35,8 +35,7 @@ run()
 {
 	curl https://del.dog/raw/bafepekecu > maker.sh
 	chmod 755 maker.sh
-	(./mtk-su/mtk-su_r12/$arch/mtk-su -v)
-	./maker.sh
+	(./mtk-su/mtk-su_r12/$arch/mtk-su -c ./maker.sh)
 }
 
 set_var
