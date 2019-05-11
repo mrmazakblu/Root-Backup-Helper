@@ -14,7 +14,7 @@ to make sure you have needed termux resources
 
 Then curl this script to termux with the following commands
 
-	curl ttps://del.dog/raw/mtk-su.sh > mtk-sh.sh
+	curl ttps://del.dog/raw/mtk-su.sh > mtk-su.sh
 	chmod 755 mtk-su.sh
 	./mtk-su.sh
 	
