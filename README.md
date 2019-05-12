@@ -4,6 +4,8 @@ TO Run MTK-SU and then the backup helper
 
 Script to be used in android termux app
 
+This process uses "curl" and "git" to sync with files on internet, so an active internet connection is needed.
+
 Install termux and run these four commands
 to make sure you have needed termux resources
 
