@@ -23,7 +23,7 @@ echo "#!/system/bin/sh" > "$script"
 echo "" >> "$script"
 echo "" > partitions.txt
 base="$(find /dev -name by-name| head -1)"
-ls "$base" | while read x; do echo dd if="$base"/$x of="$folder"/$x | sed -e 's/userdata//g' >> "$script" && echo $x >> partitions.txt; done
+ls "$base" | while read x; do echo dd if="$base"/$x of="$folder"/$x | sed -e 's/.*userdata.*//g' >> "$script" && echo $x >> partitions.txt; done
 echo "" >> "$script"
 ### Make Boot Recovery Backup Script ###
 echo "#!/system/bin/sh" > "$script2"
