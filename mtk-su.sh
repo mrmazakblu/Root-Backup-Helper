@@ -2,6 +2,7 @@
 
 base="https://raw.githubusercontent.com/mrmazakblu/Root-Backup-Helper/master"
 clone="https://github.com/mrmazakblu/Root-Backup-Helper.git"
+xda="https://forum.xda-developers.com/attachment.php?attachmentid=4749479"
 version="mtk-su_r12"
 set_var()
 {
@@ -22,7 +23,9 @@ set_var()
 instal()
 {
 	[ -d mtk-su ] && rm -rf mtk-su
-	git clone "$clone" mtk-su 2> /dev/null
+	#git clone "$clone" mtk-su 2> /dev/null
+	curl -Lkso $version.zip $xda
+	unzip -d ./mtk-su $version.zip
 	cd mtk-su
 	cd "$version"
 	cd "$arch"
