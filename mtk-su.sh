@@ -34,7 +34,7 @@ instal()
 
 run()
 {
-	curl https://del.dog/raw/bafepekecu > maker.sh
+	curl $base/dd-backup-maker.sh > maker.sh
 	chmod 755 maker.sh
 	(./mtk-su/mtk-su_r12/$arch/mtk-su -c ./maker.sh)
 }

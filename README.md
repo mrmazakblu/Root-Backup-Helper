@@ -28,7 +28,7 @@ There is no gaurantee that this mtk-su will work on your particular device. If y
 
 To run just the Backup-help curl from this address	
 	
-	curl https://del.dog/raw/bafepekecu > maker.sh
+	curl https://raw.githubusercontent.com/mrmazakblu/Root-Backup-Helper/master/dd-backup-maker.sh > maker.sh
 	chmod 755 maker.sh
 
 Next part will need root to work. The method above includes a root step.
