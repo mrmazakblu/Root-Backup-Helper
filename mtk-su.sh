@@ -7,7 +7,7 @@ clone="https://github.com/mrmazakblu/Root-Backup-Helper.git"
 set_var()
 {
 	latest="$(curl $base/VERSION.md 2> /dev/null)"
-	current="$(cat mtk-su/VERSION.md 2> /dev/null)"
+	curent="$(cat mtk-su/VERSION.md 2> /dev/null)"
 	cdir="$PWD"
 	arch="$(uname -m)"
 	if [ $arch = aarch64 ]
@@ -23,7 +23,9 @@ instal()
 	[ -d mtk-su ] && rm -rf mtk-su
 	git clone "$clone" mtk-su 2> /dev/null
 	chmod 755 mtk-su/version.sh
-	./mtk-su/version.sh
+	bash ./mtk-su/version.sh
+	echo $version in original sh
+    mkdir mtk-su/$version		
 	curl -Lkso $version.zip $xda
 	unzip -d mtk-su/$version $version.zip
 	cd mtk-su
@@ -45,7 +47,7 @@ run()
 set_var
 # test override
 #arch=arm
-if cmp -s "$latest" "$curent"
+if [ "$latest" = "$curent" ]
 then
    run
 else
