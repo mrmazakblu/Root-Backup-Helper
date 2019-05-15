@@ -23,9 +23,10 @@ set_var()
 instal()
 {
 	[ -d mtk-su ] && rm -rf mtk-su
-	#git clone "$clone" mtk-su 2> /dev/null
-	curl -Lkso $version.zip $xda
-	unzip -d ./mtk-su $version.zip
+	git clone "$clone" mtk-su 2> /dev/null
+	#mkdir mtk-su
+	#curl -Lkso $version.zip $xda
+	#unzip -d ./mtk-su $version.zip
 	cd mtk-su
 	cd "$version"
 	cd "$arch"
