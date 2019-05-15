@@ -20,7 +20,7 @@ Then curl this script to termux with the following commands
 	chmod 755 mtk-su.sh
 	./mtk-su.sh
 	
-This will download V 12 of mtk-su, then check which version (32-bit or 64-bit)
+This will download latest version of mtk-su, then check which version (32-bit or 64-bit)
 that is needed to run on your device.
 Then it will run the backup-maker script, and give the option to backup boot and recovery or all partitions.
 
