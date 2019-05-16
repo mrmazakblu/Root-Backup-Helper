@@ -22,8 +22,16 @@ mkdir "$folder"
 echo "#!/system/bin/sh" > "$script"
 echo "" >> "$script"
 echo "" > partitions.txt
-base="$(find /dev -name by-name| head -1)"
-ls "$base" | while read x; do echo dd if="$base"/$x of="$folder"/$x | sed -e 's/.*userdata.*//g' >> "$script" && echo $x >> partitions.txt; done
+basefile=$(ls /dev/block/platform/*/by-name/boot \
+	/dev/block/platform/*/*/by-name/boot | head -1) 2> /dev/null
+base=$(dirname $basefile)
+
+for x in $(ls $base); do
+	if [ $x != userdata ]; then
+		echo dd if="$base"/$x of="$folder"/$x bs=1048576 >> "$script"
+		echo $base/$x >> partitions.txt
+	fi
+done
 echo "" >> "$script"
 ### Make Boot Recovery Backup Script ###
 echo "#!/system/bin/sh" > "$script2"
