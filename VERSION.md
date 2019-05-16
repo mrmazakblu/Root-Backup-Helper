@@ -1,4 +1,4 @@
 12
-xda="https://forum.xda-developers.com/attachment.php?attachmentid=4749479"
-version="mtk-su_r12"
+https://forum.xda-developers.com/attachment.php?attachmentid=4749479
+mtk-su_r12
 
