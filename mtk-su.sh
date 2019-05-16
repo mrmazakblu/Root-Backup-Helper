@@ -7,7 +7,7 @@ set_var()
 {
 	curl $base/VERSION.md > VERSION.md
 	{ read latest; read xda; read version; } < VERSION.md
-	curent="$(cat mtk-su/VERSION.md 2> /dev/null)"
+	{ read curent; } < mtk-su/VERSION.md
 	cdir="$PWD"
 	arch="$(uname -m)"
 	if [ $arch = aarch64 ]
