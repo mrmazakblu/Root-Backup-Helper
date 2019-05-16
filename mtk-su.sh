@@ -5,7 +5,8 @@ clone="https://github.com/mrmazakblu/Root-Backup-Helper.git"
 
 set_var()
 {
-	latest="$(curl $base/VERSION.md 2> /dev/null)"
+	curl base/VERSION.md > VERSION.md
+	{ read latest; read xda; read version; } < VERSION.md
 	curent="$(cat mtk-su/VERSION.md 2> /dev/null)"
 	cdir="$PWD"
 	arch="$(uname -m)"
@@ -20,11 +21,9 @@ set_var()
 instal()
 {
 	[ -d mtk-su ] && rm -rf mtk-su
-	git clone "$clone" mtk-su 2> /dev/null
-	chmod 755 mtk-su/version.sh
-	source ./mtk-su/version.sh
-	echo $version in original sh
+	mkdir mtk-su
 	mkdir mtk-su/$version
+	curl base/VERSION.md > mtk-su/VERSION.md
 	curl -Lkso $version.zip $xda
 	unzip -d mtk-su/$version $version.zip
 	cd mtk-su
@@ -38,7 +37,6 @@ instal()
 
 run()
 {
-	source ./mtk-su/version.sh
 	curl $base/dd-backup-maker.sh > maker.sh
 	chmod 755 maker.sh
 	(./mtk-su/$version/$arch/mtk-su -c ./maker.sh)
