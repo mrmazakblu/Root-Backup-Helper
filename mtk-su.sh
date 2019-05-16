@@ -5,7 +5,7 @@ clone="https://github.com/mrmazakblu/Root-Backup-Helper.git"
 
 set_var()
 {
-	curl base/VERSION.md > VERSION.md
+	curl $base/VERSION.md > VERSION.md
 	{ read latest; read xda; read version; } < VERSION.md
 	curent="$(cat mtk-su/VERSION.md 2> /dev/null)"
 	cdir="$PWD"
@@ -23,7 +23,7 @@ instal()
 	[ -d mtk-su ] && rm -rf mtk-su
 	mkdir mtk-su
 	mkdir mtk-su/$version
-	curl base/VERSION.md > mtk-su/VERSION.md
+	curl $base/VERSION.md > mtk-su/VERSION.md
 	curl -Lkso $version.zip $xda
 	unzip -d mtk-su/$version $version.zip
 	cd mtk-su
