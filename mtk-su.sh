@@ -39,6 +39,11 @@ run()
 {
 	curl $base/dd-backup-maker.sh > maker.sh
 	chmod 755 maker.sh
+	FILES="dd-backup.sh dd-backup-boot-recovery.sh partitions.txt"
+	for F in $FILES; do
+	rm -f $F
+	touch $F
+	done
 	(./mtk-su/$version/$arch/mtk-su -c ./maker.sh)
 }
 
