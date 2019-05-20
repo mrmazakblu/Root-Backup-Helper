@@ -14,7 +14,9 @@ to make sure you have needed termux resources
 	pkg install curl
 	pkg install git
 
-Then curl this script to termux with the following commands
+Then use curl to copy the "mtk-su.sh" script to termux with the following commands
+The script is same at github location. Just easier to use "del.dog" to shorten the url.
+
 
 	curl https://del.dog/raw/mtk-su.sh > mtk-su.sh
 	chmod 755 mtk-su.sh
