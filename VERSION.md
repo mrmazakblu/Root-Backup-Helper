@@ -1,3 +1,3 @@
-13
-https://forum.xda-developers.com/attachment.php?attachmentid=4760108&d=1558062165
-mtk-su_r13
+14
+https://forum.xda-developers.com/attachment.php?attachmentid=4763929&d=1558573005
+mtk-su_r14

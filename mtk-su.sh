@@ -29,7 +29,7 @@ instal()
 	cd mtk-su
 	cd "$version"
 	cd "$arch"
-	chmod 755 mtk-su
+	chmod +x mtk-su
 	cd ..
 	cd ..
 	cd ..
@@ -38,7 +38,7 @@ instal()
 run()
 {
 	curl $base/dd-backup-maker.sh > maker.sh
-	chmod 755 maker.sh
+	chmod +x maker.sh
 	FILES="dd-backup.sh dd-backup-boot-recovery.sh partitions.txt"
 	for F in $FILES; do
 	rm -f $F

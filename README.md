@@ -19,7 +19,7 @@ The script is same at github location. Just easier to use "del.dog" to shorten t
 
 
 	curl https://del.dog/raw/mtk-su.sh > mtk-su.sh
-	chmod 755 mtk-su.sh
+	chmod +x mtk-su.sh
 	./mtk-su.sh
 	
 This will download latest version of mtk-su, then check which version (32-bit or 64-bit)
@@ -31,7 +31,7 @@ There is no gaurantee that this mtk-su will work on your particular device. If y
 To run just the Backup-help curl from this address	
 	
 	curl https://raw.githubusercontent.com/mrmazakblu/Root-Backup-Helper/master/dd-backup-maker.sh > maker.sh
-	chmod 755 maker.sh
+	chmod +x maker.sh
 
 Next part will need root to work. The method above includes a root step.
 
