@@ -22,8 +22,8 @@ mkdir "$folder"
 echo "#!/system/bin/sh" > "$script"
 echo "" >> "$script"
 echo "" > partitions.txt
-basefile=$(ls /dev/block/platform/*/by-name/boot \
-	/dev/block/platform/*/*/by-name/boot | head -1) 2> /dev/null
+basefile=$(ls /dev/block/platform/*/by-name/boot* \
+	/dev/block/platform/*/*/by-name/boot* | head -1) 2> /dev/null
 base=$(dirname $basefile)
 
 for x in $(ls $base); do
@@ -33,12 +33,14 @@ for x in $(ls $base); do
 	fi
 done
 echo "" >> "$script"
-### Make Boot Recovery Backup Script ###
-echo "#!/system/bin/sh" > "$script2"
-echo "" >> "$script2"
-echo dd if="$base"/boot of="$folder"/boot >> "$script2"
-echo dd if="$base"/recovery of="$folder"/recovery >> "$script2"
-echo "" >> "$script2"
+if ls $base/boot > /dev/null 2>$1 ; then
+    ### Make Boot Recovery Backup Script ###
+    echo "#!/system/bin/sh" > "$script2"
+    echo "" >> "$script2"
+    echo dd if="$base"/boot of="$folder"/boot >> "$script2"
+    echo dd if="$base"/recovery of="$folder"/recovery >> "$script2"
+    echo "" >> "$script2"
+fi
 ### Set Permissions On scripts ###
 chmod +x "$script"
 chmod +x "$script2"
