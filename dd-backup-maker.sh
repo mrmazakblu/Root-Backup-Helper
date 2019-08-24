@@ -14,7 +14,8 @@
 folder="/sdcard/dd-backup"
 script="dd-backup.sh"
 script2="dd-backup-boot-recovery.sh"
-
+touch "$script"
+touch "$script2"
 echo "making dd-backup folder"
 mkdir "$folder"
 ### Make Full Backup Script ###
@@ -22,8 +23,7 @@ mkdir "$folder"
 echo "#!/system/bin/sh" > "$script"
 echo "" >> "$script"
 echo "" > partitions.txt
-basefile=$(ls /dev/block/platform/*/by-name/boot* \
-	/dev/block/platform/*/*/by-name/boot* | head -1) 2> /dev/null
+basefile=$(ls /dev/block/platform/*/*/by-name/boot* | head -1) 2> /dev/null
 base=$(dirname $basefile)
 
 for x in $(ls $base); do
