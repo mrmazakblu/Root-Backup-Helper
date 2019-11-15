@@ -1,3 +1,3 @@
-18
-https://forum.xda-developers.com/attachment.php?attachmentid=4799163&d=1564465047
-mtk-su_r18
+19
+https://forum.xda-developers.com/attachment.php?attachmentid=4849861&d=1571555799
+mtk-su_r19
