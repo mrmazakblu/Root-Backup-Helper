@@ -1,3 +1,3 @@
-20
-https://forum.xda-developers.com/attachment.php?attachmentid=4912515&d=1577536324
-mtk-su_r20
+21
+https://forum.xda-developers.com/attachment.php?attachmentid=4971443&d=1584219761
+mtk-su_r21
